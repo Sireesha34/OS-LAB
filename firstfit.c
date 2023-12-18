@@ -4,7 +4,7 @@ void main()
 {
 int frag[max],b[max],f[max],i,j,nb,nf,temp,highest=0;
 static int bf[max],ff[max];
-printf("\n\tMemory Management Scheme - Worst Fit");
+printf("\n\tMemory Management Scheme - First Fit");
 printf("\nEnter the number of blocks:");
 scanf("%d",&nb);
 printf("Enter the number of files:");
@@ -32,12 +32,11 @@ temp=b[j]-f[i];
 if(temp>=0)
 if(highest<temp)
 {
-
+ff[i]=j; highest=temp;
 }
 }
 frag[i]=highest; bf[ff[i]]=1; highest=0;
 }
-ff[i]=j; highest=temp;
 }
 printf("\nFile_no:\tFile_size:\tBlock_no:\tBlock_size:\tFragement");
 for(i=1;i<=nf;i++)
