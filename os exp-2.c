@@ -26,8 +26,7 @@ in = (in+1)%bufsize;
 case 2: if(in == out)
 
 printf("\nBuffer is Empty");
-
-} } }
+  
 else
 {
 consume = buffer[out];
@@ -35,3 +34,4 @@ printf(“\nThe consumed value is %d”, consume);
 out = (out+1)%bufsize;
 }
 break;
+} } }
